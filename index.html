@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <style>
         #map {
-            width: 1318px;
+            width: 1195px;
             height: 879px;
         }
         </style>
@@ -37,7 +37,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:9
-        }).fitBounds([[48.49246902722031,3.22729786823005],[49.25424365116379,4.941083457787319]]);
+        }).fitBounds([[47.88350606772658,2.494582476059836],[49.40422654117818,5.60461580309779]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -101,7 +101,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(231,246,232,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case 'En cours':
@@ -117,7 +117,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(252,168,18,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case 'Fait':
@@ -133,7 +133,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(16,242,9,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
             }
@@ -143,7 +143,7 @@
         map.getPane('pane_ProspectionsCollectives2023Prlvements_1').style['mix-blend-mode'] = 'normal';
         var layer_ProspectionsCollectives2023Prlvements_1 = new L.geoJson(json_ProspectionsCollectives2023Prlvements_1, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_ProspectionsCollectives2023Prlvements_1',
             layerName: 'layer_ProspectionsCollectives2023Prlvements_1',
             pane: 'pane_ProspectionsCollectives2023Prlvements_1',
